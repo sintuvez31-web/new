@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPERASYON: AF DİLEME METNİ 💔➡️❤️</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Google Fonts: Rajdhani & Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        valRed: '#ff4655',
+                        valDark: '#0f1923',
+                        valPink: '#ff2a7a',
+                        valPurple: '#9d4edd',
+                        valCyan: '#00f5d4'
+                    },
+                    fontFamily: {
+                        val: ['Rajdhani', 'sans-serif'],
+                        sans: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0d0714;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(255, 42, 122, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(157, 78, 221, 0.15) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(15, 25, 35, 0.8) 0px, transparent 100%);
+            background-attachment: fixed;
+            font-family: 'Outfit', sans-serif;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        .val-font {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(22, 15, 35, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 42, 122, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-card-glow {
+            border: 1px solid rgba(255, 42, 122, 0.4);
+            box-shadow: 0 0 25px rgba(255, 42, 122, 0.25);
+        }
+
+        .val-border {
+            position: relative;
+        }
+        .val-border::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 8px; height: 8px;
+            border-top: 2px solid #ff2a7a;
+            border-left: 2px solid #ff2a7a;
+        }
+        .val-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0;
+            width: 8px; height: 8px;
+            border-bottom: 2px solid #ff2a7a;
+            border-right: 2px solid #ff2a7a;
+        }
+
+        .btn-dodge {
+            transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Scanline Effect */
+        .scanline {
+            width: 100%;
+            height: 100%;
+            height: 3px;
+            background: linear-gradient(to right, transparent, rgba(255, 42, 122, 0.3), transparent);
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: scanline 6s linear infinite;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        @keyframes scanline {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+
+        /* Pulse glow animation */
+        @keyframes heartPulse {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(255,42,122,0.8)); }
+            50% { transform: scale(1.15); filter: drop-shadow(0 0 25px rgba(255,42,122,1)); }
+        }
+
+        .heart-pulse {
+            animation: heartPulse 1.8s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative pb-20 selection:bg-valPink selection:text-white">
+    <div class="scanline"></div>
+
+    <!-- Header / Banner Status -->
+    <header class="w-full bg-valDark/90 border-b border-valPink/30 sticky top-0 z-40 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-valPink/20 p-2 rounded-lg border border-valPink/50">
+                    <i data-lucide="gamepad-2" class="w-6 h-6 text-valPink"></i>
+                </div>
+                <div>
+                    <h1 class="val-font text-lg font-bold tracking-wider text-white flex items-center gap-2">
+                        OPERASYON: ŞEYMA'DAN AF DİLEME METNİ
+                        <span class="text-xs px-2 py-0.5 rounded bg-valRed/20 text-valRed border border-valRed/40 animate-pulse">ACİL / KRİTİK</span>
+                    </h1>
+                    <p class="text-xs text-gray-400">Durum: Şeyma Tripli // Spike Yerleştirildi</p>
+                </div>
+            </div>
+
+            <!-- Match Status Badges -->
+            <div class="flex items-center gap-3 text-xs val-font">
+                <div class="flex items-center gap-2 bg-red-950/60 border border-red-500/40 px-3 py-1.5 rounded">
+                    <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                    <span class="text-gray-300">MAÇ SONUCU:</span>
+                    <span class="text-red-400 font-bold text-sm">DEFEAT (0 - 13)</span>
+                </div>
+                <div class="flex items-center gap-2 bg-emerald-950/60 border border-emerald-500/40 px-3 py-1.5 rounded">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span class="text-gray-300">GEREKEN:</span>
+                    <span class="text-emerald-400 font-bold text-sm">VICTORY (Tavlama & Af)</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 pt-10 space-y-12">
+        
+        <!-- Hero Section -->
+        <section class="text-center space-y-6 relative">
+            <div class="inline-block relative">
+                <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-valPink via-valPurple to-valCyan opacity-75 blur-lg animate-pulse"></div>
+                <div class="relative w-28 h-28 mx-auto rounded-full bg-valDark border-2 border-valPink/80 flex items-center justify-center heart-pulse">
+                    <i data-lucide="heart-crack" class="w-14 h-14 text-valPink"></i>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h2 class="val-font text-4xl sm:text-6xl font-extrabold uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-pink-200 to-valPink">
+                    Valorant'ta Ranked Kasarken Şeyma'yı Unuttum...
+                </h2>
+                <p class="text-xl sm:text-2xl text-valCyan font-bold val-font tracking-wide">
+                    Oliver bundan sonra senin sözünde Elio ✨
+                </p>
+            </div>
+
+            <div class="flex justify-center gap-4 text-xs font-mono text-gray-400">
+                <span class="bg-purple-950/50 border border-purple-500/30 px-3 py-1 rounded-full">#OyunaAraVerildi</span>
+                <span class="bg-pink-950/50 border border-pink-500/30 px-3 py-1 rounded-full">#ŞeymaHerŞeydenÖnemli</span>
+                <span class="bg-cyan-950/50 border border-cyan-500/30 px-3 py-1 rounded-full">#NoMoreValo</span>
+            </div>
+        </section>
+
+        <!-- Interactive Apology Decision Area (The Dodge Game) -->
+        <section id="decision-section" class="glass-card glass-card-glow val-border rounded-xl p-8 sm:p-12 text-center space-y-8 relative overflow-hidden">
+            <div class="space-y-3 relative z-10">
+                <span class="text-xs font-bold text-valPink uppercase tracking-widest bg-valPink/10 px-3 py-1 rounded-full border border-valPink/30">
+                    SON KARAR ANI // CLUTCH TIME
+                </span>
+                <h3 class="val-font text-3xl sm:text-5xl font-extrabold text-white">
+                    Beni Affediyor Musun Şeyma?
+                </h3>
+            </div>
+
+            <!-- Interactive Buttons Container -->
+            <div id="button-wrapper" class="relative min-h-[160px] flex flex-col sm:flex-row items-center justify-center gap-6 py-4">
+                <!-- YES BUTTON -->
+                <button id="yes-btn" onclick="celebrate()" class="w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-valDark font-extrabold text-2xl rounded-xl shadow-lg shadow-emerald-500/30 hover:scale-105 active:scale-95 transition-all duration-200 flex items-center justify-center gap-3 val-font tracking-wider z-20 cursor-pointer">
+                    <i data-lucide="heart" class="w-7 h-7 fill-valDark"></i>
+                    AFFETTİM ❤️
+                </button>
+
+                <!-- NO / DODGING BUTTON -->
+                <button id="no-btn" onmouseover="dodgeButton()" onclick="dodgeButton()" class="btn-dodge px-8 py-4 bg-valRed/20 hover:bg-valRed/30 border border-valRed/50 text-valRed font-bold text-lg rounded-xl flex items-center justify-center gap-2 val-font z-10">
+                    <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                    <span id="no-btn-text">Hala Kızgınım 😤</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Victory Modal / Hidden Celebration Card -->
+        <section id="victory-card" class="hidden glass-card val-border rounded-xl p-8 sm:p-12 text-center space-y-6 relative border-emerald-500/50 shadow-2xl shadow-emerald-500/20">
+            <div class="inline-block p-4 rounded-full bg-emerald-500/20 border border-emerald-400/40 mb-2">
+                <i data-lucide="trophy" class="w-16 h-16 text-emerald-400 animate-bounce"></i>
+            </div>
+            
+            <h2 class="val-font text-4xl sm:text-6xl font-extrabold text-emerald-400 tracking-wider">
+                VICTORY! PERFEKT MATCH! 🎉
+            </h2>
+            
+            <p class="text-gray-200 text-lg sm:text-xl max-w-xl mx-auto">
+                Kral hareket! Şeyma affettiğine göre artık Valorant'a sadece seninle girebilirim ya da oyunu komple silebiliriz. Karar senin Komutanım! 🫡
+            </p>
+
+            <!-- Af & Sadakat Sözleşmesi -->
+            <div class="bg-valDark/80 border border-emerald-500/30 rounded-lg p-6 text-left max-w-md mx-auto space-y-3 font-mono text-sm">
+                <div class="text-xs text-emerald-400 font-bold border-b border-emerald-500/30 pb-2 flex justify-between">
+                    <span>RESMİ AF SÖZLEŞMESİ</span>
+                    <span>TARIH: BUGÜN</span>
+                </div>
+                <ul class="space-y-2 text-gray-300 text-xs">
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <span>Şeyma yazınca oyun alt-tab'a alınacak.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <span>Clutch'tayken bile bildirimlere bakılacak.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <span>İstenildiği an kahve / tatlı ısmarlanacak.</span>
+                    </li>
+                </ul>
+                <div class="pt-2 text-right text-emerald-400 font-bold text-xs italic">
+                    İmza: Oliver (Şeyma'nın Fav Oliver'ı)
+                </div>
+            </div>
+
+            <button onclick="location.reload()" class="px-6 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs font-mono rounded-lg border border-gray-600 transition">
+                Süreci Sıfırla 🔄
+            </button>
+        </section>
+
+    </main>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        const noMessages = [
+            "Hala Kızgınım 😤",
+            "Emin misin ya? 🥺",
+            "Valorant'ı Sildim Valla! 🗑️",
+            "VP Alayım Sana? 💎",
+            "Son Kararın Mı? 💔",
+            "Yapma Şeyma Noolur 😭",
+            "Bak Vurursam Af Çıkmaz! 😂",
+            "Tekrardan Düşün Bence... 👀",
+            "Kaçıyorum Tutamazsın! 🏃‍♂️",
+            "Büyük Hata Yapıyorsun! 🚫"
+        ];
+
+        let messageIndex = 0;
+
+        function dodgeButton() {
+            const btn = document.getElementById('no-btn');
+            const wrapper = document.getElementById('button-wrapper');
+            const textSpan = document.getElementById('no-btn-text');
+            
+            // Container boundaries
+            const wrapperRect = wrapper.getBoundingClientRect();
+            const btnRect = btn.getBoundingClientRect();
+
+            const maxX = wrapperRect.width - btnRect.width - 20;
+            const maxY = 150; // Max vertical jump range
+
+            const randomX = (Math.random() - 0.5) * maxX;
+            const randomY = (Math.random() - 0.5) * maxY;
+
+            btn.style.position = 'relative';
+            btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+
+            // Update text
+            messageIndex = (messageIndex + 1) % noMessages.length;
+            textSpan.innerText = noMessages[messageIndex];
+        }
+
+        function celebrate() {
+            // Hide decision section & show victory section
+            document.getElementById('decision-section').classList.add('hidden');
+            const victoryCard = document.getElementById('victory-card');
+            victoryCard.classList.remove('hidden');
+
+            // Trigger Confetti
+            const duration = 4 * 1000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 999 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            const interval = setInterval(function() {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                const particleCount = 50 * (timeLeft / duration);
+                
+                confetti(Object.assign({}, defaults, { 
+                    particleCount, 
+                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                    colors: ['#ff2a7a', '#00f5d4', '#9d4edd', '#ffffff']
+                }));
+                confetti(Object.assign({}, defaults, { 
+                    particleCount, 
+                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                    colors: ['#ff2a7a', '#00f5d4', '#9d4edd', '#ffffff']
+                }));
+            }, 250);
+        }
+    </script>
+</body>
+</html>
